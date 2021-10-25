@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import colors from "colors";
+import cors from "cors";
 import { createServer } from "http";
 import { Server } from "socket.io";
 import socketEvents from "./controllers/socketEvents.js";
@@ -13,13 +14,14 @@ const httpServer = createServer(app);
 export const io = new Server(httpServer, {
   cors: {
     origin: "https://tic-tac-toe-game-socket-io.netlify.app/",
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "PUT"],
   },
 });
 
-app.use(express.json());
-
 socketEvents();
+
+app.use(express.json());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("Welcome to Tic-Tac-Toe game API");
