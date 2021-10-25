@@ -12,7 +12,7 @@ const httpServer = createServer(app);
 
 export const io = new Server(httpServer, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://tic-tac-toe-game-socket-io.netlify.app/",
     methods: ["GET", "POST"],
   },
 });
