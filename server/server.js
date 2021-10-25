@@ -21,6 +21,10 @@ app.use(express.json());
 
 socketEvents();
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Tic-Tac-Toe game API");
+});
+
 const PORT = process.env.PORT || 5000;
 
 const server = httpServer.listen(
