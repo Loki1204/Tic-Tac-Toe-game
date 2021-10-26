@@ -29,14 +29,14 @@ app.get("/", (req, res) => {
   res.send("Welcome to Tic-Tac-Toe game API");
 });
 
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
-// const server = httpServer.listen(
-//   PORT,
-//   console.log(
-//     `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-//   )
-// );
+const server = httpServer.listen(
+  PORT,
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
+  )
+);
 
 // process.on("unhandledRejection", (err, promise) => {
 //   console.log(`Logged Error: ${err.message}`);
