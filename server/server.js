@@ -30,21 +30,9 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT;
 
-<<<<<<< HEAD
 httpServer.listen(
-=======
-const server = httpServer.listen(
->>>>>>> bf949bbb623186fc8c1abc1c3bc18ccf957ddea5
   PORT,
   console.log(
     `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
   )
 );
-<<<<<<< HEAD
-=======
-
-// process.on("unhandledRejection", (err, promise) => {
-//   console.log(`Logged Error: ${err.message}`);
-//   server.close(() => process.exit(1));
-// });
->>>>>>> bf949bbb623186fc8c1abc1c3bc18ccf957ddea5
